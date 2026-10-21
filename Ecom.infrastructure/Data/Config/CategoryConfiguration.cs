@@ -19,8 +19,8 @@ namespace Ecom.infrastructure.Data.Config
                 new Category
                 {
                     Id=1,
-                    Name="test",
-                    Description="test",
+                    Name="iphone",
+                    Description="max16",
 
                 }
                 );
