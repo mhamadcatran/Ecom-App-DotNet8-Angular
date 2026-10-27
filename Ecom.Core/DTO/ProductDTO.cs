@@ -36,4 +36,5 @@ namespace Ecom.Core.DTO
     {
         public int Id { get; set; }
     }
+    
 }

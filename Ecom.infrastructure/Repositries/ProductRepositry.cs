@@ -85,5 +85,16 @@ namespace Ecom.infrastructure.Repositries
             await context.SaveChangesAsync();
             return true;
         }
+        public async Task DeleteAsync(Product product)
+        {
+            var photo = await context.Photos.Where(predicate: m => m.ProductId == product.Id).ToListAsync();
+            foreach (var item in photo)
+            {
+                imageManagementService.DeleteImageAsync( item.ImageName);
+
+            }
+            context.products.Remove(product);
+            await context.SaveChangesAsync();
+        }
     }
 }
